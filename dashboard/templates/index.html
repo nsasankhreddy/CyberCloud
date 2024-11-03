@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Security Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard\static\css\style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">AWS Security & Compliance Dashboard</h1>
+        <hr>
+        
+        <!-- Recent Issues Table -->
+        <h3>Recent Issues</h3>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Remediation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for issue in issues %}
+                <tr>
+                    <td>{{ issue.timestamp }}</td>
+                    <td>{{ issue.issue_type }}</td>
+                    <td>{{ issue.description }}</td>
+                    <td>{{ issue.remediation }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Issue Trends Chart -->
+        <div class="my-5">
+            <h3>Issue Trends</h3>
+            <canvas id="issueChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Chart.js Script for Trend Analysis -->
+    <script>
+        const ctx = document.getElementById('issueChart').getContext('2d');
+        const issueChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: {{ labels|tojson }}, // Dates for the X-axis
+                datasets: [{
+                    label: 'Issues Over Time',
+                    data: {{ data|tojson }}, // Issue counts for the Y-axis
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

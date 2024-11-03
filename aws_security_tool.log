@@ -1,0 +1,187 @@
+2024-11-02 13:55:13,035 - __main__ - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-02 13:55:13,036 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-02 13:55:13,079 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-11-02 13:55:19,578 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-02 13:55:19,578 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-02 13:55:58,609 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-02 13:55:59,268 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 13:55:59,268 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 13:55:59,268 - compliance_checks - INFO - Running compliance checks...
+2024-11-02 13:55:59,268 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-02 13:56:04,801 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-02 13:56:04,918 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-02 13:56:05,021 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-02 13:56:05,149 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-02 13:56:05,271 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-02 13:56:05,271 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-02 13:56:39,030 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-02 13:56:44,410 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-02 13:56:44,410 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-02 13:56:44,708 - compliance_checks - WARNING - Compliance issues found.
+2024-11-02 13:56:44,724 - __main__ - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy
+Suggested Remediation: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+IAM user amplify-bookstore does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user amplify-sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user B18 does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankhreddy does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+S3 bucket testbucket-cybercloud is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+2024-11-02 13:56:44,724 - email_alert - INFO - Preparing to send email alert...
+2024-11-02 13:56:45,333 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-02 13:56:45,333 - __main__ - INFO - AWS security issues found and reported!
+2024-11-02 14:53:55,856 - __main__ - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-02 14:53:55,871 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-02 14:53:55,908 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-11-02 14:54:01,806 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-02 14:54:01,806 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-02 14:54:41,145 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-02 14:54:41,659 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 14:54:41,659 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 14:54:41,659 - compliance_checks - INFO - Running compliance checks...
+2024-11-02 14:54:41,659 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-02 14:54:42,050 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-02 14:54:42,137 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-02 14:54:42,221 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-02 14:54:42,305 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-02 14:54:42,398 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-02 14:54:42,398 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-02 14:54:44,014 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-02 14:54:44,211 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-02 14:54:44,227 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-02 14:54:44,521 - compliance_checks - WARNING - Compliance issues found.
+2024-11-02 14:54:44,521 - __main__ - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy
+Suggested Remediation: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+IAM user amplify-bookstore does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user amplify-sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user B18 does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankhreddy does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+S3 bucket testbucket-cybercloud is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+2024-11-02 14:54:44,521 - email_alert - INFO - Preparing to send email alert...
+2024-11-02 14:54:44,839 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-02 14:54:44,839 - __main__ - INFO - AWS security issues found and reported!
+2024-11-02 15:02:39,397 - __main__ - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-02 15:02:39,397 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-02 15:02:39,443 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-11-02 15:02:40,156 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-02 15:02:40,158 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-02 15:02:42,497 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-02 15:02:43,239 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 15:02:43,239 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 15:02:43,248 - compliance_checks - INFO - Running compliance checks...
+2024-11-02 15:02:43,248 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-02 15:02:43,615 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-02 15:02:43,728 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-02 15:02:43,822 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-02 15:02:43,955 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-02 15:02:44,052 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-02 15:02:44,052 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-02 15:02:45,863 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-02 15:02:46,055 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-02 15:02:46,055 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-02 15:02:46,388 - compliance_checks - WARNING - Compliance issues found.
+2024-11-02 15:02:46,388 - __main__ - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy
+Suggested Remediation: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+IAM user amplify-bookstore does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user amplify-sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user B18 does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankhreddy does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+S3 bucket testbucket-cybercloud is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+2024-11-02 15:02:46,397 - email_alert - INFO - Preparing to send email alert...
+2024-11-02 15:02:47,139 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-02 15:02:47,139 - __main__ - INFO - AWS security issues found and reported!
+2024-11-02 16:08:50,397 - __main__ - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-02 16:08:50,397 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-02 16:08:50,428 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-11-02 20:01:38,605 - __main__ - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-02 20:01:38,605 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-02 20:01:38,650 - botocore.credentials - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-11-02 20:01:45,165 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-02 20:01:45,165 - misconfiguration_checks - INFO - IAM check completed with 1 issues found.
+2024-11-02 20:01:45,165 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-02 20:02:35,511 - misconfiguration_checks - INFO - S3 bucket check completed with 0 issues found.
+2024-11-02 20:02:35,511 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-02 20:02:41,395 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 20:02:41,395 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-02 20:02:41,395 - misconfiguration_checks - INFO - Security group check completed with 2 issues found.
+2024-11-02 20:02:41,408 - compliance_checks - INFO - Running compliance checks...
+2024-11-02 20:02:41,408 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-02 20:02:41,865 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-02 20:02:41,975 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-02 20:02:42,084 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-02 20:02:42,193 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-02 20:02:42,323 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-02 20:02:42,326 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-02 20:02:44,246 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-02 20:02:44,525 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-02 20:02:44,528 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-02 20:02:50,206 - compliance_checks - WARNING - Compliance issues found.
+2024-11-02 20:02:50,207 - __main__ - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy
+Suggested Remediation: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+Suggested Remediation: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+IAM user amplify-bookstore does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user amplify-sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user B18 does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankh does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+IAM user sasankhreddy does not have MFA enabled.
+Suggested Remediation: Enable MFA for this IAM user in the IAM console.
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+S3 bucket testbucket-cybercloud is publicly accessible.
+Suggested Remediation: Make the S3 bucket private using S3 bucket policies or ACL.
+2024-11-02 20:02:50,211 - email_alert - INFO - Preparing to send email alert...
+2024-11-02 20:02:55,895 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-02 20:02:55,895 - __main__ - INFO - AWS security issues found and reported!

@@ -1,9 +1,13 @@
 import boto3
 from botocore.exceptions import ClientError
+from utils.logger import get_logger
+from database_helpers import save_issue  # Import save_issue function to store issues in the database
 
-# Check if all IAM users have MFA enabled
+logger = get_logger(__name__)
+
 def check_iam_mfa_compliance():
-    print("Checking IAM users for MFA compliance...")
+    """Ensure all IAM users have MFA enabled."""
+    logger.info("Checking IAM users for MFA compliance...")
     iam_client = boto3.client('iam')
     users = iam_client.list_users()['Users']
     issues = []
@@ -11,16 +15,19 @@ def check_iam_mfa_compliance():
     for user in users:
         mfa_devices = iam_client.list_mfa_devices(UserName=user['UserName'])['MFADevices']
         if not mfa_devices:
-            issues.append(f"IAM user {user['UserName']} does not have MFA enabled.")
-            print(f"  -> Issue: IAM user {user['UserName']} lacks MFA.")
+            issue = f"IAM user {user['UserName']} does not have MFA enabled."
+            remediation = "Enable MFA for this IAM user in the IAM console."
+            issues.append((issue, remediation))
+            save_issue("IAM Policy", issue, remediation)  # Save the issue to the database
+            logger.warning(issue)
         else:
-            print(f"  -> No issues: IAM user {user['UserName']} has MFA enabled.")
+            logger.info(f"IAM user {user['UserName']} has MFA enabled.")
     
     return issues
 
-# Check if any S3 buckets are public
 def check_s3_compliance():
-    print("Checking S3 buckets for public access compliance...")
+    """Ensure no public S3 buckets are accessible."""
+    logger.info("Checking S3 buckets for public access compliance...")
     s3_client = boto3.client('s3')
     buckets = s3_client.list_buckets()['Buckets']
     issues = []
@@ -30,19 +37,22 @@ def check_s3_compliance():
         try:
             policy_status = s3_client.get_bucket_policy_status(Bucket=bucket_name).get('PolicyStatus')
             if policy_status and policy_status.get('IsPublic'):
-                issues.append(f"S3 bucket {bucket_name} is publicly accessible.")
-                print(f"  -> Issue: S3 bucket {bucket_name} is public.")
+                issue = f"S3 bucket {bucket_name} is publicly accessible."
+                remediation = "Make the S3 bucket private using S3 bucket policies or ACL."
+                issues.append((issue, remediation))
+                save_issue("S3 Bucket", issue, remediation)  # Save the issue to the database
+                logger.warning(issue)
             else:
-                print(f"  -> No issues: S3 bucket {bucket_name} is private.")
+                logger.info(f"S3 bucket {bucket_name} is private.")
         except ClientError as e:
             if e.response['Error']['Code'] != 'NoSuchBucketPolicy':
-                print(f"  -> Could not retrieve bucket policy for {bucket_name}: {e}")
+                logger.error(f"Could not retrieve bucket policy for {bucket_name}: {e}")
     
     return issues
 
-# Check if CloudTrail logging is enabled
 def check_cloudtrail_logging():
-    print("Checking CloudTrail logging compliance...")
+    """Ensure CloudTrail is enabled and logging."""
+    logger.info("Checking CloudTrail logging compliance...")
     cloudtrail_client = boto3.client('cloudtrail')
     trails = cloudtrail_client.describe_trails()['trailList']
     issues = []
@@ -50,26 +60,27 @@ def check_cloudtrail_logging():
     for trail in trails:
         status = cloudtrail_client.get_trail_status(Name=trail['Name'])
         if not status.get('IsLogging'):
-            issues.append(f"CloudTrail {trail['Name']} is not logging.")
-            print(f"  -> Issue: CloudTrail {trail['Name']} is not active.")
+            issue = f"CloudTrail {trail['Name']} is not logging."
+            remediation = "Enable logging for CloudTrail in the CloudTrail console."
+            issues.append((issue, remediation))
+            save_issue("CloudTrail", issue, remediation)  # Save the issue to the database
+            logger.warning(issue)
         else:
-            print(f"  -> No issues: CloudTrail {trail['Name']} is logging.")
+            logger.info(f"CloudTrail {trail['Name']} is logging.")
     
     return issues
 
-# Function to run all compliance checks
 def run_compliance_checks():
-    print("Running compliance checks...")
+    """Run all compliance checks and return issues with remediation suggestions."""
+    logger.info("Running compliance checks...")
     compliance_issues = []
     compliance_issues.extend(check_iam_mfa_compliance())
     compliance_issues.extend(check_s3_compliance())
     compliance_issues.extend(check_cloudtrail_logging())
     
     if compliance_issues:
-        print("Compliance issues found:")
-        for issue in compliance_issues:
-            print(issue)
+        logger.warning("Compliance issues found.")
     else:
-        print("All checks passed. AWS environment is compliant.")
+        logger.info("All checks passed. AWS environment is compliant.")
     
     return compliance_issues

@@ -1,10 +1,14 @@
+import os
 from compliance_checks import run_compliance_checks
 from misconfiguration_checks import check_aws_iam, check_aws_s3_buckets, check_aws_security_groups
 from email_alert import send_email_alert
+from utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 def generate_aws_security_report_and_send_alert():
-    """Generate a report including compliance checks and send alerts if misconfigurations are detected."""
-    print("Starting AWS security misconfiguration detection and compliance audit...\n")
+    """Generate a report including compliance and misconfiguration checks with remediation suggestions."""
+    logger.info("Starting AWS security misconfiguration detection and compliance audit...\n")
     
     # Run misconfiguration checks
     iam_issues = check_aws_iam()
@@ -18,12 +22,12 @@ def generate_aws_security_report_and_send_alert():
     all_issues = iam_issues + s3_issues + sg_issues + compliance_issues
 
     if all_issues:
-        report = "\n".join(all_issues)
-        print(f"Misconfigurations and compliance issues found: \n{report}")
-        send_email_alert("AWS Security & Compliance Issues Detected", report, "nandipatisasankhreddy@gmail.com")
-        print("AWS security issues found and reported!")
+        report = "\n".join(f"{issue[0]}\nSuggested Remediation: {issue[1]}" for issue in all_issues)
+        logger.info(f"Misconfigurations and compliance issues found: \n{report}")
+        send_email_alert("AWS Security & Compliance Issues Detected", report, os.getenv('RECIPIENT_EMAIL'))
+        logger.info("AWS security issues found and reported!")
     else:
-        print("No AWS misconfigurations or compliance issues detected.")
+        logger.info("No AWS misconfigurations or compliance issues detected.")
 
 if __name__ == "__main__":
     generate_aws_security_report_and_send_alert()
