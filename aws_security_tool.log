@@ -1794,3 +1794,350 @@ Suggested Remediation: No Remediation provided
 2024-11-03 16:26:38,109 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 16:26:38] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 2024-11-03 16:26:38,229 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 16:26:38] "[33mGET /meta.json HTTP/1.1[0m" 404 -
 2024-11-03 16:26:38,233 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 16:26:38] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-11-03 17:01:28,740 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-03 17:01:28,740 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-03 17:01:28,748 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:01:29,495 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:01:29,511 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:01:32,480 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:01:32] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-03 17:01:32,999 - werkzeug - INFO -  * Detected change in 'C:\\Python310\\Lib\\site-packages\\flask\\app.py', reloading
+2024-11-03 17:01:33,017 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:01:33] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2024-11-03 17:01:33,061 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:01:33] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:01:33,207 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:01:33] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2024-11-03 17:01:33,207 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:01:33] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2024-11-03 17:01:33,274 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:01:33] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2024-11-03 17:01:33,807 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:01:35,198 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:01:35,214 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:01:35,241 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:01:35] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:04:35,603 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:04:35,603 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:04:36,412 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:04:37,187 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:04:37,187 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:04:56,713 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-03 17:04:56,714 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-03 17:04:56,722 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:04:57,364 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:04:57,364 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:05:00,075 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:05:00] "GET / HTTP/1.1" 200 -
+2024-11-03 17:05:00,118 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:05:00] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:05:01,318 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:05:01] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:05:02,869 - main - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-03 17:05:02,870 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-03 17:05:02,890 - botocore.credentials - INFO - Found credentials in environment variables.
+2024-11-03 17:05:09,367 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-03 17:05:09,368 - misconfiguration_checks - INFO - IAM check completed with 1 issues found.
+2024-11-03 17:05:09,368 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-03 17:06:00,017 - misconfiguration_checks - INFO - S3 bucket check completed with 0 issues found.
+2024-11-03 17:06:00,021 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-03 17:06:00,785 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:06:00,794 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:06:00,795 - misconfiguration_checks - INFO - Security group check completed with 2 issues found.
+2024-11-03 17:06:00,798 - compliance_checks - INFO - Running compliance checks...
+2024-11-03 17:06:00,799 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-03 17:06:01,226 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-03 17:06:01,348 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-03 17:06:01,457 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-03 17:06:01,562 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-03 17:06:01,669 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-03 17:06:01,672 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-03 17:06:03,579 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-03 17:06:03,909 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-03 17:06:03,913 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-03 17:06:09,668 - compliance_checks - WARNING - Compliance issues found.
+2024-11-03 17:06:09,669 - main - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+IAM user amplify-bookstore does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user amplify-sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user B18 does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankhreddy does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+S3 bucket testbucket-cybercloud is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+2024-11-03 17:06:09,674 - email_alert - INFO - Preparing to send email alert...
+2024-11-03 17:06:15,387 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-03 17:06:15,388 - main - INFO - AWS security issues found and reported!
+2024-11-03 17:06:15,479 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:06:15] "[32mPOST /run-tests HTTP/1.1[0m" 302 -
+2024-11-03 17:06:15,498 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:06:15] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:06:16,139 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:06:16] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:06:49,539 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:06:49,540 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:06:49,546 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:06:50,255 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:06:51,125 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:06:51,129 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:07:03,499 - werkzeug - INFO -  * Detected change in 'C:\\Python310\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2024-11-03 17:07:03,499 - werkzeug - INFO -  * Detected change in 'C:\\Python310\\Lib\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2024-11-03 17:07:03,534 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\utils\\logger.py', reloading
+2024-11-03 17:07:03,582 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\email_alert.py', reloading
+2024-11-03 17:07:03,587 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\misconfiguration_checks.py', reloading
+2024-11-03 17:07:04,334 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:07:05,084 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:07:05,086 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:07:14,077 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:07:14] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:07:14,289 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:07:14] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:07:14,293 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:07:14] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:07:20,685 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:07:20] "GET / HTTP/1.1" 200 -
+2024-11-03 17:07:21,354 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:07:21] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:07:25,498 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:07:25] "GET / HTTP/1.1" 200 -
+2024-11-03 17:07:25,638 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:07:25] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:09:43,059 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:09:43,059 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:09:43,059 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:09:43,718 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:10:12,879 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-03 17:10:12,879 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-11-03 17:10:12,879 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:10:13,540 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:10:13,556 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:10:15,949 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:15] "GET / HTTP/1.1" 200 -
+2024-11-03 17:10:16,115 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:16] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:10:16,683 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:16] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:10:20,050 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:20] "GET / HTTP/1.1" 200 -
+2024-11-03 17:10:20,269 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:20] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:10:27,563 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:27] "GET / HTTP/1.1" 200 -
+2024-11-03 17:10:27,824 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:27] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:10:27,828 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:27] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:10:29,965 - main - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-03 17:10:29,965 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-03 17:10:29,981 - botocore.credentials - INFO - Found credentials in environment variables.
+2024-11-03 17:10:30,696 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-03 17:10:30,697 - misconfiguration_checks - INFO - IAM check completed with 1 issues found.
+2024-11-03 17:10:30,699 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-03 17:10:33,812 - misconfiguration_checks - INFO - S3 bucket check completed with 0 issues found.
+2024-11-03 17:10:33,813 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-03 17:10:34,396 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:10:34,396 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:10:34,396 - misconfiguration_checks - INFO - Security group check completed with 2 issues found.
+2024-11-03 17:10:34,396 - compliance_checks - INFO - Running compliance checks...
+2024-11-03 17:10:34,396 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-03 17:10:34,800 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-03 17:10:34,913 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-03 17:10:35,023 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-03 17:10:35,127 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-03 17:10:35,242 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-03 17:10:35,244 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-03 17:10:37,145 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-03 17:10:37,360 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-03 17:10:37,362 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-03 17:10:37,702 - compliance_checks - WARNING - Compliance issues found.
+2024-11-03 17:10:37,703 - main - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+IAM user amplify-bookstore does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user amplify-sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user B18 does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankhreddy does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+S3 bucket testbucket-cybercloud is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+2024-11-03 17:10:37,707 - email_alert - INFO - Preparing to send email alert...
+2024-11-03 17:10:38,100 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-03 17:10:38,101 - main - INFO - AWS security issues found and reported!
+2024-11-03 17:10:38,173 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:38] "[32mPOST /run-tests HTTP/1.1[0m" 302 -
+2024-11-03 17:10:38,188 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:38] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:10:38,396 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:10:38] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:13:03,489 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:13:03,489 - werkzeug - INFO -  * Detected change in 'C:\\Users\\iihts\\Desktop\\dsktp\\PROJECTS\\CyberCloud\\app.py', reloading
+2024-11-03 17:13:04,671 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-03 17:13:05,425 - werkzeug - WARNING -  * Debugger is active!
+2024-11-03 17:13:05,425 - werkzeug - INFO -  * Debugger PIN: 104-664-973
+2024-11-03 17:13:26,125 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:26] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:13:26,405 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:26] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:13:26,479 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:26] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:13:31,958 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:31] "GET / HTTP/1.1" 200 -
+2024-11-03 17:13:33,668 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:33] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:13:34,319 - main - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-03 17:13:34,319 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-03 17:13:34,360 - botocore.credentials - INFO - Found credentials in environment variables.
+2024-11-03 17:13:35,344 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-03 17:13:35,347 - misconfiguration_checks - INFO - IAM check completed with 1 issues found.
+2024-11-03 17:13:35,347 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-03 17:13:37,799 - misconfiguration_checks - INFO - S3 bucket check completed with 0 issues found.
+2024-11-03 17:13:37,808 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-03 17:13:38,451 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:13:38,458 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:13:38,458 - misconfiguration_checks - INFO - Security group check completed with 2 issues found.
+2024-11-03 17:13:38,462 - compliance_checks - INFO - Running compliance checks...
+2024-11-03 17:13:38,462 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-03 17:13:38,905 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-03 17:13:39,026 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-03 17:13:39,144 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-03 17:13:39,274 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-03 17:13:39,389 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-03 17:13:39,390 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-03 17:13:41,128 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-03 17:13:41,399 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-03 17:13:41,403 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-03 17:13:41,708 - compliance_checks - WARNING - Compliance issues found.
+2024-11-03 17:13:41,708 - main - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+IAM user amplify-bookstore does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user amplify-sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user B18 does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankhreddy does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+S3 bucket testbucket-cybercloud is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+2024-11-03 17:13:41,725 - email_alert - INFO - Preparing to send email alert...
+2024-11-03 17:13:42,740 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-03 17:13:42,740 - main - INFO - AWS security issues found and reported!
+2024-11-03 17:13:42,826 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:42] "[32mPOST /run-tests HTTP/1.1[0m" 302 -
+2024-11-03 17:13:42,846 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:42] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:13:43,065 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:13:43] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:21:30,749 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:30] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:21:31,258 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:31] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:21:31,406 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:31] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:21:34,248 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:34] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:21:34,461 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:34] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:21:51,502 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:51] "GET / HTTP/1.1" 200 -
+2024-11-03 17:21:52,505 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:52] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:21:54,770 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:54] "GET / HTTP/1.1" 200 -
+2024-11-03 17:21:54,971 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:21:54] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:21:58,184 - main - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-03 17:21:58,185 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-03 17:21:58,617 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-03 17:21:58,617 - misconfiguration_checks - INFO - IAM check completed with 1 issues found.
+2024-11-03 17:21:58,617 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-03 17:22:00,712 - misconfiguration_checks - INFO - S3 bucket check completed with 0 issues found.
+2024-11-03 17:22:00,716 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-03 17:22:01,250 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:22:01,258 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:22:01,259 - misconfiguration_checks - INFO - Security group check completed with 2 issues found.
+2024-11-03 17:22:01,261 - compliance_checks - INFO - Running compliance checks...
+2024-11-03 17:22:01,262 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-03 17:22:01,659 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-03 17:22:01,771 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-03 17:22:01,911 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-03 17:22:02,021 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-03 17:22:02,129 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-03 17:22:02,129 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-03 17:22:03,790 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-03 17:22:04,013 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-03 17:22:04,014 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-03 17:22:04,329 - compliance_checks - WARNING - Compliance issues found.
+2024-11-03 17:22:04,329 - main - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+IAM user amplify-bookstore does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user amplify-sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user B18 does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankhreddy does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+S3 bucket testbucket-cybercloud is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+2024-11-03 17:22:04,329 - email_alert - INFO - Preparing to send email alert...
+2024-11-03 17:22:05,798 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-03 17:22:05,813 - main - INFO - AWS security issues found and reported!
+2024-11-03 17:22:05,892 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:22:05] "[32mPOST /run-tests HTTP/1.1[0m" 302 -
+2024-11-03 17:22:05,908 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:22:05] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:22:06,121 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:22:06] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:31:35,642 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:35] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:31:35,771 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:35] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:31:36,179 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:36] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:31:46,695 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:46] "GET / HTTP/1.1" 200 -
+2024-11-03 17:31:47,684 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:47] "[33mGET /meta.json HTTP/1.1[0m" 404 -
+2024-11-03 17:31:51,834 - main - INFO - Starting AWS security misconfiguration detection and compliance audit...
+
+2024-11-03 17:31:51,836 - misconfiguration_checks - INFO - Checking for overly permissive IAM policies...
+2024-11-03 17:31:52,238 - misconfiguration_checks - WARNING - Overly permissive IAM policy detected: OverlyPermissivePolicy
+2024-11-03 17:31:52,238 - misconfiguration_checks - INFO - IAM check completed with 1 issues found.
+2024-11-03 17:31:52,238 - misconfiguration_checks - INFO - Checking for publicly accessible S3 buckets...
+2024-11-03 17:31:54,386 - misconfiguration_checks - INFO - S3 bucket check completed with 0 issues found.
+2024-11-03 17:31:54,386 - misconfiguration_checks - INFO - Checking for open security groups...
+2024-11-03 17:31:54,852 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:31:54,874 - misconfiguration_checks - WARNING - Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.
+2024-11-03 17:31:54,874 - misconfiguration_checks - INFO - Security group check completed with 2 issues found.
+2024-11-03 17:31:54,875 - compliance_checks - INFO - Running compliance checks...
+2024-11-03 17:31:54,876 - compliance_checks - INFO - Checking IAM users for MFA compliance...
+2024-11-03 17:31:55,234 - compliance_checks - WARNING - IAM user amplify-bookstore does not have MFA enabled.
+2024-11-03 17:31:55,359 - compliance_checks - WARNING - IAM user amplify-sasankh does not have MFA enabled.
+2024-11-03 17:31:55,511 - compliance_checks - WARNING - IAM user B18 does not have MFA enabled.
+2024-11-03 17:31:55,628 - compliance_checks - WARNING - IAM user sasankh does not have MFA enabled.
+2024-11-03 17:31:55,745 - compliance_checks - WARNING - IAM user sasankhreddy does not have MFA enabled.
+2024-11-03 17:31:55,747 - compliance_checks - INFO - Checking S3 buckets for public access compliance...
+2024-11-03 17:31:57,270 - compliance_checks - WARNING - S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.
+2024-11-03 17:31:57,523 - compliance_checks - WARNING - S3 bucket testbucket-cybercloud is publicly accessible.
+2024-11-03 17:31:57,526 - compliance_checks - INFO - Checking CloudTrail logging compliance...
+2024-11-03 17:31:57,842 - compliance_checks - WARNING - Compliance issues found.
+2024-11-03 17:31:57,842 - main - INFO - Misconfigurations and compliance issues found: 
+Overly permissive IAM policy detected: OverlyPermissivePolicy: Restrict permissions in the IAM policy. Avoid using '*' for actions or resources.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+Insecure Security Group detected: CyberCloud_SecurityGroup allows access from everywhere.: Restrict access to specific IP ranges. Avoid using 0.0.0.0/0.
+Suggested Remediation: No Remediation provided
+IAM user amplify-bookstore does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user amplify-sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user B18 does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankh does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+IAM user sasankhreddy does not have MFA enabled.: Enable MFA for this IAM user in the IAM console.
+Suggested Remediation: No Remediation provided
+S3 bucket storeb4acee6b8fb84aa09d55bdb36543f16710300-prod is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+S3 bucket testbucket-cybercloud is publicly accessible.: Make the S3 bucket private using S3 bucket policies or ACL.
+Suggested Remediation: No Remediation provided
+2024-11-03 17:31:57,844 - email_alert - INFO - Preparing to send email alert...
+2024-11-03 17:31:58,251 - email_alert - ERROR - Failed to send alert: HTTP Error 401: Unauthorized
+2024-11-03 17:31:58,252 - main - INFO - AWS security issues found and reported!
+2024-11-03 17:31:58,328 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:58] "[32mPOST /run-tests HTTP/1.1[0m" 302 -
+2024-11-03 17:31:58,338 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:58] "GET /?iam_score=40&s3_score=80&security_group_score=80 HTTP/1.1" 200 -
+2024-11-03 17:31:58,622 - werkzeug - INFO - 127.0.0.1 - - [03/Nov/2024 17:31:58] "[33mGET /meta.json HTTP/1.1[0m" 404 -

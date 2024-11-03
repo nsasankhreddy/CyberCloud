@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AWS Security Dashboard</title>
+    <title>AWS Security & Compliance Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Style for the circular progress bars */
+        .progress-circle {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+
+        .progress-circle canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container my-5">
@@ -24,7 +48,24 @@
             {% endfor %}
           {% endif %}
         {% endwith %}
-        
+
+        <!-- Circular Progress Bars -->
+        <h3 class="text-center">Security Scores</h3>
+        <div class="d-flex justify-content-around align-items-center">
+            <div class="progress-circle">
+                <canvas id="iamScoreChart"></canvas>
+                <div class="progress-text" id="iamScoreText">0%</div>
+            </div>
+            <div class="progress-circle">
+                <canvas id="s3ScoreChart"></canvas>
+                <div class="progress-text" id="s3ScoreText">0%</div>
+            </div>
+            <div class="progress-circle">
+                <canvas id="securityGroupScoreChart"></canvas>
+                <div class="progress-text" id="securityGroupScoreText">0%</div>
+            </div>
+        </div>
+
         <!-- Recent Issues Table -->
         <h3>Recent Issues</h3>
         <table class="table table-striped mt-3">
@@ -55,20 +96,60 @@
         </div>
     </div>
 
-    <!-- Chart.js Script for Trend Analysis -->
+    <!-- Chart.js Script for Circular Progress Bars and Trend Analysis -->
     <script>
-        // Log data in console to verify it is correctly passed to JavaScript
-        console.log("Labels (Dates):", {{ labels|tojson }});
-        console.log("Data (Counts):", {{ data|tojson }});
+        // Function to animate circular progress bars
+        function animateProgress(ctx, score, elementId) {
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress++;
+                ctx.clearRect(0, 0, 150, 150);
 
-        const ctx = document.getElementById('issueChart').getContext('2d');
-        const issueChart = new Chart(ctx, {
+                // Draw the background circle
+                ctx.beginPath();
+                ctx.arc(75, 75, 70, 0, 2 * Math.PI);
+                ctx.strokeStyle = '#E0E0E0';
+                ctx.lineWidth = 10;
+                ctx.stroke();
+
+                // Draw the animated progress arc
+                ctx.beginPath();
+                ctx.arc(75, 75, 70, -0.5 * Math.PI, (2 * progress / 100 - 0.5) * Math.PI);
+                ctx.strokeStyle = '#4CAF50';
+                ctx.lineWidth = 10;
+                ctx.stroke();
+
+                // Update the percentage text
+                document.getElementById(elementId).textContent = `${progress}%`;
+
+                if (progress >= score) clearInterval(interval);
+            }, 20);  // Speed of animation
+        }
+
+        // Initialize the circular progress bars
+        window.onload = function() {
+            const iamScore = {{ iam_score }};
+            const s3Score = {{ s3_score }};
+            const securityGroupScore = {{ security_group_score }};
+
+            const iamCtx = document.getElementById('iamScoreChart').getContext('2d');
+            const s3Ctx = document.getElementById('s3ScoreChart').getContext('2d');
+            const securityGroupCtx = document.getElementById('securityGroupScoreChart').getContext('2d');
+
+            animateProgress(iamCtx, iamScore, 'iamScoreText');
+            animateProgress(s3Ctx, s3Score, 's3ScoreText');
+            animateProgress(securityGroupCtx, securityGroupScore, 'securityGroupScoreText');
+        };
+
+        // Trend Analysis Line Chart
+        const issueCtx = document.getElementById('issueChart').getContext('2d');
+        new Chart(issueCtx, {
             type: 'line',
             data: {
-                labels: {{ labels|tojson }}, // Dates for X-axis
+                labels: {{ labels|tojson }},
                 datasets: [{
                     label: 'Issues Over Time',
-                    data: {{ data|tojson }},    // Counts for Y-axis
+                    data: {{ data|tojson }},
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1
