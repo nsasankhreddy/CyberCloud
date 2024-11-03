@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS Security Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard\static\css\style.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container my-5">
         <h1 class="text-center">AWS Security & Compliance Dashboard</h1>
         <hr>
+
+        <!-- Run Tests Button -->
+        <form action="{{ url_for('run_tests') }}" method="POST" class="text-center">
+            <button type="submit" class="btn btn-primary mb-3">Run Security Tests</button>
+        </form>
+        
+        <!-- Success/Failure Messages -->
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-info">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
         
         <!-- Recent Issues Table -->
         <h3>Recent Issues</h3>
@@ -27,10 +39,10 @@
             <tbody>
                 {% for issue in issues %}
                 <tr>
-                    <td>{{ issue.timestamp }}</td>
-                    <td>{{ issue.issue_type }}</td>
-                    <td>{{ issue.description }}</td>
-                    <td>{{ issue.remediation }}</td>
+                    <td>{{ issue.Timestamp }}</td>
+                    <td>{{ issue.Issue_type }}</td>
+                    <td>{{ issue.Description }}</td>
+                    <td>{{ issue.Remediation }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -45,14 +57,18 @@
 
     <!-- Chart.js Script for Trend Analysis -->
     <script>
+        // Log data in console to verify it is correctly passed to JavaScript
+        console.log("Labels (Dates):", {{ labels|tojson }});
+        console.log("Data (Counts):", {{ data|tojson }});
+
         const ctx = document.getElementById('issueChart').getContext('2d');
         const issueChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: {{ labels|tojson }}, // Dates for the X-axis
+                labels: {{ labels|tojson }}, // Dates for X-axis
                 datasets: [{
                     label: 'Issues Over Time',
-                    data: {{ data|tojson }}, // Issue counts for the Y-axis
+                    data: {{ data|tojson }},    // Counts for Y-axis
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)',
                     borderWidth: 1
@@ -60,9 +76,7 @@
             },
             options: {
                 scales: {
-                    y: {
-                        beginAtZero: true
-                    }
+                    y: { beginAtZero: true }
                 }
             }
         });
