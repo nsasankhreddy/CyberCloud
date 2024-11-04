@@ -91,5 +91,6 @@ This journey not only highlighted the importance of precise configuration manage
 ![image](https://github.com/user-attachments/assets/78998cdd-4f27-49c5-a8ca-347b6d92f6ad)
 ![image](https://github.com/user-attachments/assets/eac94239-0ea9-4d6d-9176-afeb4a93596d)
 ![image](https://github.com/user-attachments/assets/17b2a190-17f6-4da3-93c3-44fd8e508c84)
+![image](https://github.com/user-attachments/assets/8dc1ad0b-411a-40ed-b7be-ce1fcb73e7c5)
 
 ###### Demo Link: https://web-production-7ad1f.up.railway.app/
