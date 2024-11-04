@@ -4,8 +4,31 @@ from compliance_checks import run_compliance_checks
 from misconfiguration_checks import check_aws_iam, check_aws_s3_buckets, check_aws_security_groups
 from email_alert import send_email_alert
 from utils.logger import get_logger
+import boto3
 
 logger = get_logger(__name__)
+
+# Common AWS service clients
+s3_client = boto3.client(
+    's3',
+    aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
+    aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
+    region_name=os.getenv('AWS_DEFAULT_REGION')
+)
+
+iam_client = boto3.client(
+    'iam',
+    aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
+    aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
+    region_name=os.getenv('AWS_DEFAULT_REGION')
+)
+
+ec2_client = boto3.client(
+    'ec2',
+    aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
+    aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'),
+    region_name=os.getenv('AWS_DEFAULT_REGION')
+)
 
 def generate_aws_security_report_and_send_alert():
     """Generate a report including compliance and misconfiguration checks with Remediation suggestions."""
